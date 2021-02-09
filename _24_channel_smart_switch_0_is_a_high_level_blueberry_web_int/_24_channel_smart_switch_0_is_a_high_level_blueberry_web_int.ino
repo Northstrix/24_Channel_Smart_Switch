@@ -49,9 +49,33 @@ byte combinations[256]={0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,
 0xEC,0xED,0xEE,0xEF,0xF0,0xF1,0xF2,0xF3,0xF4,0xF5,0xF6,0xF7,
 0xF8,0xF9,0xFA,0xFB,0xFC,0xFD,0xFE,0xFF};
 
-  int x,b,c,d,e,f,g,h; // ROOM N1
-  int k,l,m,n,o,p,q,r; // ROOM N2
-  int s,t,u,v,w,y,z,last; // ROOM N3
+  int x = 1;
+  int b = 2;
+  int c = 4;
+  int d = 8;
+  int e = 16;
+  int f = 32;
+  int g = 64;
+  int h = 128;
+  // ROOM N1
+  int k = 1;
+  int l = 2;
+  int m = 4;
+  int n = 8;
+  int o = 16;
+  int p = 32;
+  int q = 64;
+  int r = 128;
+  // ROOM N2
+  int s = 1;
+  int t = 2;
+  int u = 4;
+  int v = 8;
+  int w = 16;
+  int y = 32;
+  int z = 64;
+  int last = 128;
+  // ROOM N3
   WiFiServer server(80);
   void shiftOut(int myDataPin, int myClockPin, byte myDataOut) {
     int i=0;
